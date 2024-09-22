@@ -1,0 +1,60 @@
+{
+    "partDatas": [
+        {
+            "key": 0,
+            "value": {
+                "hitZone": 60,
+                "durability": 480,
+                "clackPart": 1
+            }
+        },
+        {
+            "key": 1,
+            "value": {
+                "hitZone": 50,
+                "durability": 480,
+                "clackPart": 2
+            }
+        },
+        {
+            "key": 2,
+            "value": {
+                "hitZone": 50,
+                "durability": 480,
+                "clackPart": 4
+            }
+        },
+        {
+            "key": 3,
+            "value": {
+                "hitZone": 30,
+                "durability": 280,
+                "clackPart": 8
+            }
+        },
+        {
+            "key": 4,
+            "value": {
+                "hitZone": 30,
+                "durability": 280,
+                "clackPart": 0
+            }
+        },
+        {
+            "key": 5,
+            "value": {
+                "hitZone": 30,
+                "durability": 280,
+                "clackPart": 0
+            }
+        },
+        {
+            "key": 6,
+            "value": {
+                "hitZone": 45,
+                "durability": 480,
+                "clackPart": 0
+            }
+        }
+    ]
+}

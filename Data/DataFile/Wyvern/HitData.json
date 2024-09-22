@@ -1,0 +1,224 @@
+{
+    "hitDatas": [
+        {
+            "position": {
+                "x": 0.0,
+                "y": -30.0,
+                "z": 50.0
+            },
+            "radius": 1.0,
+            "nodeName": "Cabeza",
+            "hitPart": 0
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 30.0,
+                "z": -70.0
+            },
+            "radius": 1.0,
+            "nodeName": "Cabeza",
+            "hitPart": 0
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": -30.0,
+                "z": 30.0
+            },
+            "radius": 2.0,
+            "nodeName": "Pecho_3",
+            "hitPart": 3
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "radius": 2.0,
+            "nodeName": "Cadera",
+            "hitPart": 3
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -70.0
+            },
+            "radius": 1.2000000476837159,
+            "nodeName": "Cola_2",
+            "hitPart": 6
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -140.0
+            },
+            "radius": 1.2000000476837159,
+            "nodeName": "Cola_3",
+            "hitPart": 6
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -140.0
+            },
+            "radius": 1.2000000476837159,
+            "nodeName": "Cola_4",
+            "hitPart": 6
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -140.0
+            },
+            "radius": 1.2000000476837159,
+            "nodeName": "Cola_5",
+            "hitPart": 6
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -110.0
+            },
+            "radius": 1.2000000476837159,
+            "nodeName": "Cola_6",
+            "hitPart": 6
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -30.0
+            },
+            "radius": 1.2000000476837159,
+            "nodeName": "Cola_7",
+            "hitPart": 6
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 20.0,
+                "z": 0.0
+            },
+            "radius": 0.699999988079071,
+            "nodeName": "Tobillo_Der",
+            "hitPart": 5
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "radius": 0.699999988079071,
+            "nodeName": "Pata_Der",
+            "hitPart": 5
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "radius": 0.699999988079071,
+            "nodeName": "Tobillo_Izq",
+            "hitPart": 4
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "radius": 0.699999988079071,
+            "nodeName": "Pata_Izq",
+            "hitPart": 4
+        },
+        {
+            "position": {
+                "x": -50.0,
+                "y": 0.0,
+                "z": -80.0
+            },
+            "radius": 2.0,
+            "nodeName": "Antebrazo_Der",
+            "hitPart": 2
+        },
+        {
+            "position": {
+                "x": -100.0,
+                "y": 0.0,
+                "z": -50.0
+            },
+            "radius": 2.0,
+            "nodeName": "Ala_Der",
+            "hitPart": 2
+        },
+        {
+            "position": {
+                "x": 50.0,
+                "y": 0.0,
+                "z": -80.0
+            },
+            "radius": 2.0,
+            "nodeName": "Antebrazo_Izq",
+            "hitPart": 1
+        },
+        {
+            "position": {
+                "x": 100.0,
+                "y": 0.0,
+                "z": -80.0
+            },
+            "radius": 2.0,
+            "nodeName": "Ala_Izq",
+            "hitPart": 1
+        },
+        {
+            "position": {
+                "x": -120.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "radius": 2.0,
+            "nodeName": "Ala_Der_4_2",
+            "hitPart": 2
+        },
+        {
+            "position": {
+                "x": 100.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "radius": 2.0,
+            "nodeName": "Ala_Der_4_3",
+            "hitPart": 2
+        },
+        {
+            "position": {
+                "x": 125.0,
+                "y": 0.0,
+                "z": -70.0
+            },
+            "radius": 2.0,
+            "nodeName": "Ala_Izq_3_2",
+            "hitPart": 1
+        },
+        {
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 40.0
+            },
+            "radius": 2.0,
+            "nodeName": "Ala_Izq_3_3",
+            "hitPart": 1
+        }
+    ]
+}

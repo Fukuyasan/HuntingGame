@@ -1,0 +1,111 @@
+{
+    "eventDatas": [
+        {
+            "key": 7,
+            "value": [
+                {
+                    "beginInputSecond": 0.4699999988079071,
+                    "endInputSecond": 0.800000011920929
+                },
+                {
+                    "beginInputSecond": 0.20000000298023225,
+                    "endInputSecond": 0.5
+                }
+            ]
+        },
+        {
+            "key": 8,
+            "value": [
+                {
+                    "beginInputSecond": 0.33000001311302187,
+                    "endInputSecond": 0.800000011920929
+                },
+                {
+                    "beginInputSecond": 0.20000000298023225,
+                    "endInputSecond": 0.5
+                },
+                {
+                    "beginInputSecond": 0.0,
+                    "endInputSecond": 0.20000000298023225
+                }
+            ]
+        },
+        {
+            "key": 9,
+            "value": [
+                {
+                    "beginInputSecond": 0.6000000238418579,
+                    "endInputSecond": 0.8399999737739563
+                },
+                {
+                    "beginInputSecond": 0.4000000059604645,
+                    "endInputSecond": 0.699999988079071
+                },
+                {
+                    "beginInputSecond": 0.0,
+                    "endInputSecond": 0.4000000059604645
+                }
+            ]
+        },
+        {
+            "key": 10,
+            "value": [
+                {
+                    "beginInputSecond": 0.4000000059604645,
+                    "endInputSecond": 0.8600000143051148
+                },
+                {
+                    "beginInputSecond": 0.20000000298023225,
+                    "endInputSecond": 0.4000000059604645
+                }
+            ]
+        },
+        {
+            "key": 11,
+            "value": [
+                {
+                    "beginInputSecond": 0.20000000298023225,
+                    "endInputSecond": 0.30000001192092898
+                },
+                {
+                    "beginInputSecond": 0.019999999552965165,
+                    "endInputSecond": 0.2199999988079071
+                }
+            ]
+        },
+        {
+            "key": 12,
+            "value": [
+                {
+                    "beginInputSecond": 0.6200000047683716,
+                    "endInputSecond": 0.8399999737739563
+                },
+                {
+                    "beginInputSecond": 0.30000001192092898,
+                    "endInputSecond": 0.6000000238418579
+                },
+                {
+                    "beginInputSecond": 0.0,
+                    "endInputSecond": 0.4000000059604645
+                }
+            ]
+        },
+        {
+            "key": 13,
+            "value": [
+                {
+                    "beginInputSecond": 0.6000000238418579,
+                    "endInputSecond": 0.8500000238418579
+                },
+                {
+                    "beginInputSecond": 0.4000000059604645,
+                    "endInputSecond": 0.6000000238418579
+                },
+                {
+                    "beginInputSecond": 0.0,
+                    "endInputSecond": 0.6000000238418579
+                }
+            ]
+        }
+    ]
+}

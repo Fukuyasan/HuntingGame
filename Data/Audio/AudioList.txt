@@ -1,0 +1,16 @@
+Data/Audio/BGM/Tenseness.wav
+Data/Audio/SE/Player/Walk.wav
+Data/Audio/SE/Player/InVail.wav
+Data/Audio/SE/Player/Slash.wav
+Data/Audio/SE/Player/GeiHit1.wav
+Data/Audio/SE/Player/Die.wav
+Data/Audio/SE/Player/Attack1.wav
+Data/Audio/SE/Player/Attack2.wav
+Data/Audio/SE/Player/Attack3.wav
+Data/Audio/SE/Player/Attack4.wav
+Data/Audio/SE/Dragon/Voice.wav
+Data/Audio/SE/Dragon/Roar.wav
+Data/Audio/SE/Dragon/FootStep.wav
+Data/Audio/SE/Dragon/Explosion.wav
+Data/Audio/SE/Dragon/Land.wav
+Data/Audio/SE/Dragon/Clack.wav

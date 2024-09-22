@@ -1,0 +1,60 @@
+{
+    "collisionDatas": [
+        {
+            "key": 7,
+            "value": {
+                "attackPower": 5.0,
+                "hitStopFrame": 20,
+                "invincibleTime": 0.5
+            }
+        },
+        {
+            "key": 8,
+            "value": {
+                "attackPower": 10.0,
+                "hitStopFrame": 20,
+                "invincibleTime": 0.5
+            }
+        },
+        {
+            "key": 9,
+            "value": {
+                "attackPower": 15.0,
+                "hitStopFrame": 20,
+                "invincibleTime": 0.5
+            }
+        },
+        {
+            "key": 10,
+            "value": {
+                "attackPower": 10.0,
+                "hitStopFrame": 10,
+                "invincibleTime": 0.5
+            }
+        },
+        {
+            "key": 11,
+            "value": {
+                "attackPower": 5.0,
+                "hitStopFrame": 10,
+                "invincibleTime": 0.5
+            }
+        },
+        {
+            "key": 12,
+            "value": {
+                "attackPower": 15.0,
+                "hitStopFrame": 20,
+                "invincibleTime": 0.5
+            }
+        },
+        {
+            "key": 13,
+            "value": {
+                "attackPower": 10.0,
+                "hitStopFrame": 20,
+                "invincibleTime": 0.5
+            }
+        }
+    ]
+}

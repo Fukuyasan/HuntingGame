@@ -1,0 +1,5 @@
+Data/Effect/Blow11.efk
+Data/Effect/fire.efkproj
+Data/Effect/Hit.efk
+Data/Effect/HitWeakPoint.efk
+Data/Effect/smoke.efkefc

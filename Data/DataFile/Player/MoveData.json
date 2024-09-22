@@ -1,0 +1,32 @@
+{
+    "moveDatas": [
+        {
+            "key": 8,
+            "value": {
+                "movePower": 1.0,
+                "lerpRate": 0.0
+            }
+        },
+        {
+            "key": 9,
+            "value": {
+                "movePower": 5.0,
+                "lerpRate": 0.10000000149011612
+            }
+        },
+        {
+            "key": 12,
+            "value": {
+                "movePower": 1.0,
+                "lerpRate": 0.05000000074505806
+            }
+        },
+        {
+            "key": 13,
+            "value": {
+                "movePower": 10.0,
+                "lerpRate": 0.019999999552965165
+            }
+        }
+    ]
+}

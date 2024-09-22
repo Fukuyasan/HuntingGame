@@ -1,0 +1,49 @@
+{
+    "areaDatas": [
+        {
+            "areaNum": 0,
+            "areaPos": {
+                "x": 70.0,
+                "y": 5.0,
+                "z": 70.0
+            },
+            "areaRange": 60.0
+        },
+        {
+            "areaNum": 1,
+            "areaPos": {
+                "x": 80.0,
+                "y": 5.0,
+                "z": 190.0
+            },
+            "areaRange": 40.0
+        },
+        {
+            "areaNum": 2,
+            "areaPos": {
+                "x": 180.0,
+                "y": 5.0,
+                "z": 230.0
+            },
+            "areaRange": 25.0
+        },
+        {
+            "areaNum": 3,
+            "areaPos": {
+                "x": 250.0,
+                "y": 10.0,
+                "z": 170.0
+            },
+            "areaRange": 30.0
+        },
+        {
+            "areaNum": 4,
+            "areaPos": {
+                "x": 250.0,
+                "y": 5.0,
+                "z": 50.0
+            },
+            "areaRange": 40.0
+        }
+    ]
+}
