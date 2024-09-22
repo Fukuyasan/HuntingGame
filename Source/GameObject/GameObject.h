@@ -12,17 +12,17 @@
 
 // 前方宣言
 class Component;
+class GameObjectManager;
 
 // ラベル
 enum class Layer
 {
-	Default,
 	Player,
 	Otomo,
 	Enemy,
 	Weapon,
 	Stage,
-	Max
+	Non
 };
 
 // コンポーネントを追加するための箱
@@ -37,15 +37,12 @@ public:
 	virtual void OnGUI();
 
 	// 名前
-	void SetName(const char* name) { m_name = name; }
-	const char* GetName() { return m_name.c_str(); }
-	std::string GetNameToString() { return m_name; }
+	void SetName(const char* name);
 
-	void SetParent(const char* name) { m_parentName = name; }
-	const char* GetParentName() { return m_parentName.c_str(); }
+	const char* GetName() { return m_name.c_str(); }
 
 	// ラベル
-	void SetLayer(Layer layer) { m_layer = layer; }
+	void SetLayer(Layer label) { m_layer = label; }
 	Layer GetLayer() { return m_layer; }
 
 	// モデル取得
@@ -54,7 +51,14 @@ public:
 
 	Transform GetTransform() { return transform; }
 
-	// コンポーネント取得
+	void SetID(const int id) { ID = id; }
+	const int GetID() { return ID; }
+
+	/// <summary>
+	/// コンポーネント取得
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <returns></returns>
 	template<class T>
 	std::shared_ptr<T> GetComponent()
 	{
@@ -69,7 +73,11 @@ public:
 		return nullptr;
 	}
 
-	// コンポーネント追加
+	/// <summary>
+	/// コンポーネント追加
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <returns></returns>
 	template<class T, class... Args>
 	std::shared_ptr<T> AddComponent(Args... args)
 	{
@@ -89,9 +97,11 @@ public:
 private:
 	std::string m_name;
 	std::string m_parentName;
-	Layer m_layer;
+	Layer m_layer = Layer::Non;
 
 	std::unique_ptr<Model> m_model;
 
 	std::vector<std::shared_ptr<Component>> m_components;
+
+	int ID = 0;
 };

@@ -1,16 +1,16 @@
+#include <imgui.h>
+
 #include "Graphics/Graphics.h"
 #include "GameObjectManager.h"
 
 std::shared_ptr<GameObject> GameObjectManager::Create()
 {
 	auto object = std::make_shared<GameObject>();
-	{
-		static int id = 0;
-		char name[256];
-		::sprintf_s(name, sizeof(name), "GameObject%d", id++);
-		object->SetName(name);
-	}
+
+	object->SetID(m_objectCount);
+
 	m_startObjects.emplace_back(object);
+	m_findObjects.emplace_back(object);
 	return object;
 }
 
@@ -34,6 +34,8 @@ void GameObjectManager::Render(const RenderContext& rc, Shader* shader)
 
 	for (auto& object : m_updateObjects)
 	{
+		// モデルが存在していたら描画
+		if (!object->GetModel()) continue;
 		shader->Draw(dc, object->GetModel());
 	}
 
@@ -42,31 +44,71 @@ void GameObjectManager::Render(const RenderContext& rc, Shader* shader)
 
 void GameObjectManager::OnGUI()
 {
-	for (auto& object : m_updateObjects)
+	OnHierarchy();
+	OnInspector();
+}
+
+void GameObjectManager::OnHierarchy()
+{
+	ImGui::SetNextWindowPos(ImVec2(10, 350), ImGuiCond_FirstUseEver);
+	ImGui::SetNextWindowSize(ImVec2(300, 300), ImGuiCond_FirstUseEver);
+
+	if (ImGui::Begin("Hierarchy", nullptr, ImGuiWindowFlags_NoScrollWithMouse))
 	{
-		object->OnGUI();
+		for (auto& object : m_updateObjects)
+		{
+			ImGuiTreeNodeFlags nodeFlags = ImGuiTreeNodeFlags_Leaf;
+			
+			ImGui::TreeNodeEx(object.get(), nodeFlags, object->GetName());
+
+			if (ImGui::IsItemClicked())
+			{
+				// 単一選択だけ対応しておく
+				ImGuiIO& io = ImGui::GetIO();
+				m_selectedObject = object;
+			}		
+
+			ImGui::TreePop();
+		}
 	}
+
+	ImGui::End();
+}
+
+void GameObjectManager::OnInspector()
+{
+	ImGui::SetNextWindowPos(ImVec2(10, 350), ImGuiCond_FirstUseEver);
+	ImGui::SetNextWindowSize(ImVec2(300, 300), ImGuiCond_FirstUseEver);
+
+	if (ImGui::Begin("Inspector", nullptr, ImGuiWindowFlags_NoScrollWithMouse))
+	{
+		if (m_selectedObject.lock() != nullptr)
+		{
+			m_selectedObject.lock()->OnGUI();
+		}
+	}
+
+	ImGui::End();
 }
 
 std::shared_ptr<GameObject> GameObjectManager::Find(const char* name)
 {
-	// まず初期化配列で探す
-	for (auto& object : m_startObjects)
-	{
-		if (object->GetNameToString() != name) continue;
+	const int findID = m_objectsID[name];
 
-		return object;
-	}
-
-	// 次に更新配列で探す
-	for (auto& object : m_updateObjects)
+	for (auto& object : m_findObjects)
 	{
-		if (object->GetNameToString() != name) continue;
+		if (object->GetID() != findID) continue;
 
 		return object;
 	}
 
 	return nullptr;
+}
+
+void GameObjectManager::SetObjectID(const char* name)
+{
+	m_objectsID.emplace(std::make_pair(name, m_objectCount));
+	++m_objectCount;
 }
 
 void GameObjectManager::StartObjects()

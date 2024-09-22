@@ -1,4 +1,6 @@
 #include "GameObject.h"
+#include "GameObjectManager.h"
+
 #include "Component/Component.h"
 
 void GameObject::Start()
@@ -24,4 +26,10 @@ void GameObject::OnGUI()
 		component->OnDebugPrimitive();
 		component->OnDebugGUI();
 	}
+}
+
+void GameObject::SetName(const char* name)
+{
+	m_name = name;
+	GameObjectManager::Instance().SetObjectID(name);
 }

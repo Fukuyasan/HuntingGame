@@ -1,7 +1,7 @@
 #include "Enemy.h"
 #include "Graphics/ShaderState.h"
 #include "EnemyManager.h"
-#include "GameObject/GameObjectManager.h""
+#include "GameObject/GameObjectManager.h"
 
 void Enemy::DrawDebugHitData(DebugRenderer* renderer, const HitInformation::HitData& hit)
 {
