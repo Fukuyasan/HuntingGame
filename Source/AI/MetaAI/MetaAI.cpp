@@ -61,7 +61,7 @@ void MetaAI::ImportStageData()
 {
 	// エリアファイル読み込み
 	{
-		std::ifstream ifs("Data/Json/AreaData.json", std::ios::in);
+		std::ifstream ifs("Data/DataFile/AreaData.json", std::ios::in);
 
 		if (ifs.is_open())
 		{

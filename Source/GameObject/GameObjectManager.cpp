@@ -84,6 +84,33 @@ void GameObjectManager::OnInspector()
 	{
 		if (m_selectedObject.lock() != nullptr)
 		{
+			// トランスフォーム
+			if (ImGui::CollapsingHeader("Transform", ImGuiTreeNodeFlags_DefaultOpen))
+			{
+				// 位置
+				DirectX::XMFLOAT3 position = m_selectedObject.lock()->transform.GetPosition();
+				ImGui::DragFloat3("Position", &position.x, 0.1f);
+				m_selectedObject.lock()->transform.SetPosition(position);
+
+				// 回転
+				DirectX::XMFLOAT3 angle = m_selectedObject.lock()->transform.GetAngle();
+				DirectX::XMFLOAT3 a{};
+				a.x = DirectX::XMConvertToDegrees(angle.x);
+				a.y = DirectX::XMConvertToDegrees(angle.y);
+				a.z = DirectX::XMConvertToDegrees(angle.z);
+				ImGui::DragFloat3("Angle", &a.x);
+				angle.x = DirectX::XMConvertToRadians(a.x);
+				angle.y = DirectX::XMConvertToRadians(a.y);
+				angle.z = DirectX::XMConvertToRadians(a.z);
+
+				m_selectedObject.lock()->transform.SetAngle(angle);
+
+				// スケール
+				float s = m_selectedObject.lock()->transform.GetScale().x;
+				ImGui::DragFloat("Scale", &s, 0.1f);
+				m_selectedObject.lock()->transform.SetScale(s);
+			}
+
 			m_selectedObject.lock()->OnGUI();
 		}
 	}

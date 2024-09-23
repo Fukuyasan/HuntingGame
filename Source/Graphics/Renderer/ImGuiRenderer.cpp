@@ -25,7 +25,6 @@ ImGuiRenderer::ImGuiRenderer(HWND hWnd, ID3D11Device* device)
 	io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;         // We can honor GetMouseCursor() values (optional)
 	io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;          // We can honor io.WantSetMousePos requests (optional, rarely used)
 	io.BackendPlatformName = "ImGuiRenderer";
-	io.ImeWindowHandle = hWnd;
 
 	// Keyboard mapping. ImGui will use those indices to peek into the io.KeysDown[] array that we will update during the application lifetime.
 	io.KeyMap[ImGuiKey_Tab]        = VK_TAB;
@@ -49,6 +48,9 @@ ImGuiRenderer::ImGuiRenderer(HWND hWnd, ID3D11Device* device)
 	io.KeyMap[ImGuiKey_X]          = 'X';
 	io.KeyMap[ImGuiKey_Y]          = 'Y';
 	io.KeyMap[ImGuiKey_Z]          = 'Z';
+
+	// ドッキング対応
+	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
 
 	// 頂点シェーダー
 

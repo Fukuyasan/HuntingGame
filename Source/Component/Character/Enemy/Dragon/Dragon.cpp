@@ -373,34 +373,6 @@ void Dragon::OnDebugGUI()
 	//	// 状態
 	//	DebugCondition();
 
-	//	//トランスフォーム
-	//	if (ImGui::CollapsingHeader("Transform", ImGuiTreeNodeFlags_DefaultOpen))
-	//	{
-	//		// 位置
-	//		DirectX::XMFLOAT3 position = transform.GetPosition();
-	//		ImGui::InputFloat3("Position", &position.x);
-	//		transform.SetPosition(position);
-
-	//		// 回転
-	//		DirectX::XMFLOAT3 a{};
-	//		DirectX::XMFLOAT3 angle = transform.GetAngle();
-	//		a.x = DirectX::XMConvertToDegrees(angle.x);
-	//		a.y = DirectX::XMConvertToDegrees(angle.y);
-	//		a.z = DirectX::XMConvertToDegrees(angle.z);
-	//		ImGui::InputFloat3("Angle", &a.x);
-
-	//		angle.x = DirectX::XMConvertToRadians(a.x);
-	//		angle.y = DirectX::XMConvertToRadians(a.y);
-	//		angle.z = DirectX::XMConvertToRadians(a.z);
-	//		transform.SetAngle(angle);
-
-	//		// スケール
-	//		float s = transform.GetScale().x;
-	//		ImGui::InputFloat("Scale", &s);
-
-	//		transform.SetScale(s);
-	//	}
-
 	//	//ステータス
 	//	if (ImGui::CollapsingHeader("Status", ImGuiTreeNodeFlags_DefaultOpen))
 	//	{
