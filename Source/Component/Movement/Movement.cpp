@@ -5,6 +5,8 @@
 #include "GameObject/GameObject.h"
 #include "GameObject/GameObjectManager.h"
 
+#include "Manager/StageManager.h"
+
 void Movement::Move(float vx, float vz, float speed)
 {
     // 移動ベクトルを設定
@@ -131,7 +133,7 @@ void Movement::UpdateVerticalMove(float elapsedTime)
             object->transform.m_position.z };
 
         // レイキャストによる地面判定
-        auto stage = GameObjectManager::Instance().Find("Stage");
+        auto stage = GameObjectManager::Instance().Find("Terrain");
         HitResult hit;
         if (Collision::IntersectRayVsModel(start, end, stage->GetModel(), hit))
         {
@@ -291,7 +293,7 @@ void Movement::UpdateHorizontalMove(float elapsedTime)
     };
 
     // レイキャストによる壁判定
-    std::shared_ptr<GameObject> stage = GameObjectManager::Instance().Find("Stage");
+    std::shared_ptr<GameObject> stage = GameObjectManager::Instance().Find("Terrain");
     HitResult hit;
     if (Collision::IntersectRayVsModel(start, end, stage->GetModel(), hit))
     {

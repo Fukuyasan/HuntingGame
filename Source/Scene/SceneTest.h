@@ -70,5 +70,4 @@ private:
 
 	// ¢ŠE‚ğ~‚ß‚éiƒJƒƒ‰‚Ì‚İ“®‚©‚¹‚éj
 	bool theWorld = false;
-
 };

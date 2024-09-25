@@ -8,6 +8,7 @@ std::shared_ptr<GameObject> GameObjectManager::Create()
 	auto object = std::make_shared<GameObject>();
 
 	object->SetID(m_objectCount);
+	++m_objectCount;
 
 	m_startObjects.emplace_back(object);
 	m_findObjects.emplace_back(object);
@@ -118,7 +119,7 @@ void GameObjectManager::OnInspector()
 	ImGui::End();
 }
 
-std::shared_ptr<GameObject> GameObjectManager::Find(const char* name)
+std::shared_ptr<GameObject> GameObjectManager::Find(std::string name)
 {
 	const int findID = m_objectsID[name];
 
@@ -132,10 +133,9 @@ std::shared_ptr<GameObject> GameObjectManager::Find(const char* name)
 	return nullptr;
 }
 
-void GameObjectManager::SetObjectID(const char* name)
+void GameObjectManager::SetObjectID(std::string name, int id)
 {
-	m_objectsID.emplace(std::make_pair(name, m_objectCount));
-	++m_objectCount;
+	m_objectsID.emplace(std::make_pair(name, id));
 }
 
 void GameObjectManager::StartObjects()
@@ -173,4 +173,9 @@ void GameObjectManager::RemoveObjects()
 		eraseObject(m_updateObjects, object);
 	}
 	m_removeObjects.clear();
+}
+
+void GameObjectManager::UpdateTransform()
+{
+
 }

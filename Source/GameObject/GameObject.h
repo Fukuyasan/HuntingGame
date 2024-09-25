@@ -37,7 +37,7 @@ public:
 	virtual void OnGUI();
 
 	// –¼‘O
-	void SetName(const char* name);
+	void SetName(std::string name);
 
 	const char* GetName() { return m_name.c_str(); }
 
@@ -91,17 +91,26 @@ public:
 		return p;
 	}
 
+	void SetParent(std::string parentName);
+
+private:
+	void AddChildren(std::shared_ptr<GameObject> children)
+	{
+		m_children.emplace_back(children);
+	}
+
 public:
 	Transform transform;
+	std::weak_ptr<GameObject> m_parent;
 
 private:
 	std::string m_name;
-	std::string m_parentName;
 	Layer m_layer = Layer::Non;
 
 	std::unique_ptr<Model> m_model;
-
 	std::vector<std::shared_ptr<Component>> m_components;
 
 	int ID = 0;
+
+	std::vector<std::shared_ptr<GameObject>> m_children;
 };

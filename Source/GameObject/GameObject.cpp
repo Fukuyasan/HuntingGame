@@ -28,8 +28,18 @@ void GameObject::OnGUI()
 	}
 }
 
-void GameObject::SetName(const char* name)
+void GameObject::SetName(std::string name)
 {
 	m_name = name;
-	GameObjectManager::Instance().SetObjectID(name);
+	int id = shared_from_this()->GetID();
+
+	GameObjectManager::Instance().SetObjectID(name, id);
+}
+
+void GameObject::SetParent(std::string parentName)
+{
+	auto parent = GameObjectManager::Instance().Find(parentName);
+
+	parent->AddChildren(shared_from_this());
+	m_parent = parent;
 }

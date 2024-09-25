@@ -55,11 +55,11 @@ void Sword::TrailRender()
 
 void Sword::ComputeTransform()
 {
-    auto player = GameObjectManager::Instance().Find("Player");
+    auto parent = gameObject.lock()->m_parent;
 
 	// 接着したいノードのワールド行列を取得
-    int nodeIndex             = player->GetModel()->FindNodeIndex("mixamorig:RightHand");
-	DirectX::XMFLOAT4X4 world = player->GetModel()->GetNodes().at(nodeIndex).worldTransform;
+    int nodeIndex             = parent.lock()->GetModel()->FindNodeIndex("mixamorig:RightHand");
+	DirectX::XMFLOAT4X4 world = parent.lock()->GetModel()->GetNodes().at(nodeIndex).worldTransform;
 	DirectX::XMMATRIX W       = DirectX::XMLoadFloat4x4(&world);
 
 	// 剣のローカル行列

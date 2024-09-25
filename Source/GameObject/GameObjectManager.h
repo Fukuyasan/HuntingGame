@@ -33,25 +33,27 @@ public:
 	void OnHierarchy();
 	void OnInspector();
 
-	std::shared_ptr<GameObject> Find(const char* name);
+	std::shared_ptr<GameObject> Find(std::string name);
 
-	void SetObjectID(const char* name);
+	void SetObjectID(std::string name, int id);
 
 private:
 	void StartObjects();
 	void UpdateObjects();
 	void RemoveObjects();
 
+	void UpdateTransform();
+
 public:
 	std::vector<std::shared_ptr<GameObject>> m_startObjects;
 	std::vector<std::shared_ptr<GameObject>> m_updateObjects;
 	std::set<std::shared_ptr<GameObject>>    m_removeObjects;
+	std::weak_ptr<GameObject> m_selectedObject;
 
 	std::vector<std::shared_ptr<GameObject>> m_findObjects;
 
-	std::map<const char*, int> m_objectsID;
+	std::map<std::string, int> m_objectsID;
 
-	std::weak_ptr<GameObject> m_selectedObject;
 
 public:
 	static inline int m_objectCount = 0;

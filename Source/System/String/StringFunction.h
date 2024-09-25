@@ -1,17 +1,19 @@
 #pragma once
 #include <string>
 
-static std::string sprit(std::string& str, const char* delim)
+static std::string sprit(const std::string& str, const char* delim)
 {
+	std::string spritStr = str;
+
 	// ‹æØ‚é•¶š‚ª‚È‚¯‚ê‚Î‚»‚Ì‚Ü‚Ü•Ô‚·
-	if (delim == "") return str;
+	if (delim == "") return spritStr;
 
 	// ‹æØ‚è‚½‚¢•¶š‚ÌoŒ»ˆÊ’u‚ğæ“¾
-	size_t delimIndex = str.find(delim);
-	if (delimIndex == -1) return str;
+	size_t delimIndex = spritStr.find(delim);
+	if (delimIndex == std::string::npos) return spritStr;
 
 	// ‚»‚êˆÈ~‚Ì•¶š‚ğíœ
-	std::string delimedStr = str.erase(delimIndex);
+	std::string delimedStr = spritStr.erase(delimIndex);
 
 	return delimedStr;
 }

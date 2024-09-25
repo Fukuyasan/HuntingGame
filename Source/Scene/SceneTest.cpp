@@ -22,6 +22,8 @@
 #include "Component/Character/Player/player.h"
 #include "Component/Character/Enemy/Dragon/Dragon.h"
 
+#include "Manager/StageManager.h"
+
 void SceneTest::Initialize()
 {
 	Graphics& graphics = Graphics::Instance();
@@ -32,12 +34,10 @@ void SceneTest::Initialize()
 	// ステージ
 	{
 		std::shared_ptr<GameObject> gameObject = GameObjectManager::Instance().Create();
-		gameObject->LoadModel("Data/Model/Stage/model/Terrain.mdl");
 		gameObject->SetName("Stage");
-		gameObject->transform.SetPosition({ 0.0f, 0.0f, 0.0f });
-		gameObject->transform.SetScale(0.02f);
 		gameObject->SetLayer(Layer::Stage);
-		gameObject->AddComponent<StageMain>();
+
+		StageManager::Instance().LoadStageObjects("Data/DataFile/StageData.json");
 	}
 	// プレイヤー
 	{
@@ -58,6 +58,8 @@ void SceneTest::Initialize()
 		gameObject->SetName("Sword");
 		gameObject->SetLayer(Layer::Weapon);
 		gameObject->AddComponent<Sword>();
+
+		gameObject->SetParent("Player");
 	}
 	// オトモ
 	{
@@ -113,7 +115,6 @@ void SceneTest::Initialize()
 
 void SceneTest::Finalize()
 {
-
 }
 
 void SceneTest::Update(const float& elapsedTime)
